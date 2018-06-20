@@ -33,7 +33,7 @@ namespace KatlaSport.WebApi.Controllers
         [SwaggerResponse(HttpStatusCode.InternalServerError)]
         public async Task<IHttpActionResult> GetHives()
         {
-            var hives = await _hiveService.GetHives();
+            var hives = await _hiveService.GetHivesAsync();
             return Ok(hives);
         }
 
@@ -44,7 +44,7 @@ namespace KatlaSport.WebApi.Controllers
         [SwaggerResponse(HttpStatusCode.InternalServerError)]
         public async Task<IHttpActionResult> GetHive(int hiveId)
         {
-            var hive = await _hiveService.GetHive(hiveId);
+            var hive = await _hiveService.GetHiveAsync(hiveId);
             return Ok(hive);
         }
 
@@ -66,7 +66,7 @@ namespace KatlaSport.WebApi.Controllers
         [SwaggerResponse(HttpStatusCode.InternalServerError)]
         public async Task<IHttpActionResult> SetStatus([FromUri] int hiveId, [FromUri] bool deletedStatus)
         {
-            await _hiveService.SetStatus(hiveId, deletedStatus);
+            await _hiveService.SetStatusAsync(hiveId, deletedStatus);
             return ResponseMessage(Request.CreateResponse(HttpStatusCode.NoContent));
         }
     }
