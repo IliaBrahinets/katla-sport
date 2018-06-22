@@ -3,7 +3,7 @@
 namespace KatlaSport.Services.HiveManagement
 {
     /// <summary>
-    /// Represents a validator for <see cref="UpdateHiveRequestValidator"/>
+    /// Represents a validator for <see cref="UpdateHiveRequest"/>
     /// </summary>
     public class UpdateHiveRequestValidator : AbstractValidator<UpdateHiveRequest>
     {
