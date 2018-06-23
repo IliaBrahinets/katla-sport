@@ -10,7 +10,6 @@ import { environment } from 'environments/environment';
   styleUrls: ['./hive-form.component.css']
 })
 export class HiveFormComponent implements OnInit {
-  private url = environment.apiUrl + 'api/hives/';
 
   hive = new Hive(0, "", "", "", false, "");
   existed = false;
