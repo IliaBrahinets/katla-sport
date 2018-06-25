@@ -119,6 +119,7 @@
     <Compile Include="HiveManagement\HiveSectionServiceTests.cs" />
     <Compile Include="HiveManagement\HiveServiceAutoFixtureTests.cs" />
     <Compile Include="HiveManagement\HiveServiceTests.cs" />
+    <Compile Include="Infrastructure\MapperInitializer.cs" />
     <Compile Include="Infrastructure\MockExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

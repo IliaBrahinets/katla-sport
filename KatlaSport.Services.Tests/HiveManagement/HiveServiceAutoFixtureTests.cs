@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using AutoFixture;
 using AutoFixture.Xunit2;
-using AutoMapper;
 using KatlaSport.DataAccess.ProductStoreHive;
 using KatlaSport.Services.HiveManagement;
 using Moq;
@@ -14,7 +13,7 @@ namespace KatlaSport.Services.Tests.HiveManagement
     {
         static HiveServiceAutoFixtureTests()
         {
-            Mapper.Initialize(cfg => cfg.AddProfile(new HiveManagementMappingProfile()));
+            MapperInitializer.Initialize();
         }
 
         [Theory]
