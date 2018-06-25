@@ -52,8 +52,17 @@
     <Reference Include="AutoFixture.Xunit2, Version=4.3.0.0, Culture=neutral, PublicKeyToken=b24654c590009d4f, processorArchitecture=MSIL">
       <HintPath>..\packages\AutoFixture.Xunit2.4.3.0\lib\net452\AutoFixture.Xunit2.dll</HintPath>
     </Reference>
+    <Reference Include="AutoMapper, Version=7.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.7.0.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\packages\Castle.Core.4.2.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Fare, Version=2.1.0.0, Culture=neutral, PublicKeyToken=ea68d375bf33a7c8, processorArchitecture=MSIL">
       <HintPath>..\packages\Fare.2.1.1\lib\net35\Fare.dll</HintPath>
@@ -68,11 +77,13 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.4.0\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net47\System.ValueTuple.dll</HintPath>
+    <Reference Include="System.ValueTuple">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -94,7 +105,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="**\*.cs" Exclude="obj\Debug\*.cs;obj\Release\*.cs" />
+    <Compile Include="Infrastructure\AutoMoqDataAttribute.cs" />
+    <Compile Include="CatalogueManagement\CatalogueManagementServiceTests.cs" />
+    <Compile Include="CustomerManagement\CustomerManagementServiceAutoFixtureTests.cs" />
+    <Compile Include="CustomerManagement\CustomerManagementServiceTests.cs" />
+    <Compile Include="Infrastructure\FakeAsyncEntitySet\FakeAsyncDbSet.cs" />
+    <Compile Include="Infrastructure\FakeAsyncEntitySet\FakeAsyncEntitySet.cs" />
+    <Compile Include="Infrastructure\FakeAsyncEntitySet\FakeDbAsyncEnumerable.cs" />
+    <Compile Include="Infrastructure\FakeAsyncEntitySet\FakeDbAsyncEnumerator.cs" />
+    <Compile Include="Infrastructure\FakeAsyncEntitySet\FakeDbAsyncQueryProvider.cs" />
+    <Compile Include="Infrastructure\FakeEntitySet.cs" />
+    <Compile Include="HiveManagement\HiveSectionServiceAutoFixtureTests.cs" />
+    <Compile Include="HiveManagement\HiveSectionServiceTests.cs" />
+    <Compile Include="HiveManagement\HiveServiceAutoFixtureTests.cs" />
+    <Compile Include="HiveManagement\HiveServiceTests.cs" />
+    <Compile Include="Infrastructure\MockExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
